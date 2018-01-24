@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>Kirtle - Pixel Art</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <a href="Gallery.html" target="_self">
+    <img src="/w3images/logo.jpg" style="width:45%;" class="w3-round"><br><br>
+    </a>
+    <h4><b>Kirtle</b></h4>
+    <p class="w3-text-grey">Pixel Art</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="Gallery.html" target="_self" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>GALLERY</a> 
+    <a href="About.html" target="_self" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="Contact.html" target="_self" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-instagram w3-hover-opacity"></i>  <a href="https://instagram.com/kirtle_" target="_blank">@Kirtle_</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Page body -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Contact -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>xkirtle26@gmail.com</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Lisbon, PT</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-instagram w3-xxlarge w3-text-light-grey"></i></p>
+        <p>@Kirtle_</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+     
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Footer stuff</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+        <a href="Reaper.html" target="_blank">
+         <img src="/w3images/Water/Reaper.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large w3-text-light-grey">Reaper</span><br>
+          <span class="w3-text-light-gray">From Overwatch!</span>  
+        </a>
+        </li>
+        <li class="w3-padding-16">
+        <a href="Link.html" target="_blank">
+          <img src="/w3images/Water/Link.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large w3-text-light-gray">Link</span><br>
+          <span class="w3-text-light-gray">From Zelda!</span>
+        </a>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Pixel Art</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Pixel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">8bit</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Pixel Artist</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Pixels</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Pixel Artwork</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Perler Beads</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Art</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Nintendo</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Anime</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Retro</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Pokemon</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Kirtle Copyright © 2018. All Rights Reserved</div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

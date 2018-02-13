@@ -1,1 +1,0 @@
-var FaqItems={init:function(){FaqItems.container=$("faq-category-content");FaqItems.accordion=new Accordion(FaqItems.container,"faq-header-text-","faq-toggle","faq-item-content-")}};

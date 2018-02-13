@@ -1,5 +1,0 @@
-RewriteEngine On
-AddDefaultCharset utf-8
-php_flag always_populate_raw_post_data On
-
-RewriteRule pictures/(.*)_small.png pictures/$1.png

@@ -1,0 +1,55 @@
+RewriteEngine On
+#Options All -Indexes
+RewriteRule ^(|/)$ index.php
+RewriteRule ^(.*)\.htm$ $1.php [NC]
+
+RewriteRule ^data_classes(|/)$ error.php
+RewriteRule ^habbo-imaging/avatarimage/([^/]+) /habbo-imaging/avatarimage.php?user=$1
+RewriteRule ^settings(|/)$ configuracao.php
+RewriteRule ^index(|/)$ fim.php
+RewriteRule ^manutencao(|/)$ manutencao.php
+RewriteRule ^jogo(|/)$ jogo.php
+RewriteRule ^viprank(|/)$ viprank.php
+RewriteRule ^registrar(|/)$ register.php
+RewriteRule ^register(|/)$ register.php
+RewriteRule ^registerstaff(|/)$ registerstaff.php
+RewriteRule ^cadastrar(|/)$ register.php
+RewriteRule ^principal(|/)$ me.php
+RewriteRule ^postagem(|/)$ postagem.php
+RewriteRule ^ranking(|/)$ ranking.php
+RewriteRule ^me(|/)$ me.php
+RewriteRule ^hall(|/)$ hall.php
+RewriteRule ^recomendar(|/)$ recomendar.php
+RewriteRule ^loja-raros(|/)$ planosr.php
+RewriteRule ^noticias(|/)$ noticias.php
+RewriteRule ^comunidade(|/)$ comunidade.php
+RewriteRule ^referidos(|/)$ referidos.php
+RewriteRule ^loja(|/)$ loja.php
+RewriteRule ^error(|/)$ 404.php
+RewriteRule ^logout(|/)$ logout.php
+RewriteRule ^sair(|/)$ logout.php
+RewriteRule ^staff(|/)$ staff.php
+RewriteRule ^equipe(|/)$ staff.php
+RewriteRule ^client(|/)$ client.php
+RewriteRule ^perfil(|/)$ perfil.php
+RewriteRule ^onlines(|/)$ onlines.php
+RewriteRule ^curtirpost(|/)$ curtirpost.php
+RewriteRule ^Badgedata/badge/([^/]+)(|/)$ ./habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/badge/([^/]+)(|/).gif$ ./habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/badge/([^/]+)(|/)$ ./habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/badge/(.*).gif$ ./habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/badge/(.*).gif$ ./habbo-imaging/badge.php?badge=$1 
+RewriteRule ^habbo-imaging/badge/(.*).gif$ ./habbo-imaging/badge.php?badge=$1
+
+ErrorDocument 400 /404.php
+ErrorDocument 401 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+

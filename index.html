@@ -62,11 +62,11 @@
 	
 		
 		
-    <div class="topnav w3-section w3-bottombar w3-padding-16">
+    <div id="filter" class="topnav w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"> Characters</button>
-      <button class="w3-button w3-white w3-hide-small"> Others</button>
+      <button class="btn w3-button w3-black" onclick="filterSelection('all')">ALL</button>
+      <button class="btn w3-button w3-white" onclick="filterSelection('characters')"> Characters</button>
+      <button class="btn w3-button w3-white w3-hide-small" onclick="filterSelection('others')"> Others</button>
 	  <div class="search-container">
 	  <form action="/action_page.php">
 	  <input type="text" placeholder="Search...">
@@ -82,7 +82,7 @@
   <!-- First Photo Water-->
     <div class="container">
     <div class="row">
-   <div class="col-md-4">
+   <div class="filterDiv all characters col-md-4">
         <a href="/Reaper.html" target="_self">
             <img src="/w3images/Water/"  style="width:100%" class="w3-hover-opacity"> </a>
                 <div class="w3-white">
@@ -91,7 +91,7 @@
                             <p>Yet to come</p> </div>
                 </div>
 		</div>
-    <div id="Link" class="col-md-4">
+    <div class="filterDiv all characters col-md-4">
         <a href="/subpages/Link.html" target="_self">
         <img src="/w3images/Water/Link.png"  style="width:100%" class="w3-hover-opacity"> </a>
             <div class="w3-white">
@@ -100,7 +100,7 @@
                 <p>Link! Still waiting for the Breath of the Wild to come out on PC because I'm not going to buy a console to play one game</p> </div>
             </div>
     </div>
-            <div class="col-md-4">
+            <div class="filterDiv all characters col-md-4">
                 <a href="/subpages/Batman.html" target="_self">
                 <img src="/w3images/Water/Batman.png"  style="width:100%" class="w3-hover-opacity"> </a>
                     <div class="w3-white">
@@ -117,7 +117,7 @@
   <!-- Second Photo Water-->
  <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="filterDiv all characters col-md-4">
             <a href="/subpages/Vayne.html" target="_self">
                 <img src="/w3images/Water/Vayne.png"  style="width:100%" class="w3-hover-opacity"> </a>
                     <div class="w3-white">
@@ -126,7 +126,7 @@
                                 <p>Vayne! Had a blast making her! I wanna do more league champions in the future!</p> </div>
                     </div>
        </div>
-        <div class="col-md-4">
+        <div class="filterDiv all characters col-md-4">
             <a href="/subpages/Meliodas.html" target="_self">
                 <img src="/w3images/Water/Meliodas.png"  style="width:100%" class="w3-hover-opacity"> </a>
                     <div class="w3-white">
@@ -135,7 +135,7 @@
                                 <p>Meliodas from Nanatsu no Taizai! (The Seven Deadly Sins)</p> </div>
                     </div>
         </div>
-            <div class="col-md-4">
+            <div class="filterDiv all characters col-md-4">
                 <a href="/subpages/Espeon.html" target="_self">
                     <img src="/w3images/Water/Espeon.png"  style="width:100%" class="w3-hover-opacity"> </a>
                         <div class="w3-white">
@@ -151,7 +151,7 @@
     <!-- Third Photo Water-->
 <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="filterDiv all others col-md-4">
                 <a href="/subpages/Dratini.html" target="_self"> <img src="/w3images/Water/Dratini.png"  style="width:100%" class="w3-hover-opacity"> </a>
                     <div class="w3-white">
                         <div style=margin-left:10px>
@@ -160,7 +160,7 @@
                     </div>
             </div>
             
-        <div class="col-md-4">
+        <div class="filterDiv all others col-md-4">
             <a href="/subpages/Marill.html" target="_self"> <img src="/w3images/Water/Marill.png"  style="width:100%" class="w3-hover-opacity"> </a>
                 <div class="w3-white">
                     <div style=margin-left:10px>
@@ -168,7 +168,7 @@
                             <p>Marill is adorably cute but sadly ain't that good in Pokémon games!</p> </div>
                 </div>
        </div>
-            <div class="col-md-4">
+            <div class="filterDiv all others col-md-4">
                 <a href="/subpages/Reaper.html" target="_self"> <img src="/w3images/Water/Reaper.png"  style="width:100%" class="w3-hover-opacity"> </a>
                     <div class="w3-white">
                         <div style=margin-left:10px>
@@ -256,6 +256,54 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+	
+	
+<script>
+	filterSelection("all")
+	function filterSelection(c) {
+	  var x, i;
+	  x = document.getElementsByClassName("filterDiv");
+	  if (c == "all") c = "";
+	   for (i = 0; i < x.length; i++) {
+		RemoveClass(x[i], "show");
+		if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+	  }
+	}
+
+	function AddClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i]) == -1) {
+		  element.className += " " + arr2[i];
+		}
+	  }
+	}
+
+	function RemoveClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+		while (arr1.indexOf(arr2[i]) > -1) {
+		  arr1.splice(arr1.indexOf(arr2[i]), 1); 
+		}
+	  }
+	  element.className = arr1.join(" ");
+	}
+
+	var btnContainer = document.getElementById("filter");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+		var current = document.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		this.className += " active";
+	  });
+	}
+</script>
+
 
 </body>
 </html>
